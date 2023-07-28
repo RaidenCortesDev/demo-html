@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .carousel {
+        height: 60vh;
+        /* Ajusta la altura deseada en porcentaje */
+        overflow: hidden;
+        /* Para recortar las imágenes más grandes */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="reglamentos.html">Reglamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="redes.html">Redes sociales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutoriales.html">Tutoriales</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="themeButton" class="btn" onclick="cambiarTema()">
+                <i class="bi bi-brightness-high-fill"></i><!-- Ícono por defecto (tema claro) -->
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="alert alert-success" role="alert">
+            incio <i class="bi bi-heart"></i>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Agregamos un contenedor para centrar el carrusel -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://png.pngtree.com/background/20230622/original/pngtree-landing-page-template-for-web-showcasing-3d-computer-design-with-open-picture-image_3950513.jpg"
+                                class="d-block w-100 carousel-image" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://png.pngtree.com/background/20230417/original/pngtree-website-blu-ray-technology-picture-image_2447430.jpg"
+                                class="d-block w-100 carousel-image" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.freepik.com/foto-gratis/fondo-tecnologia-futurista-3d-ondas-datos-que-fluyen_1048-17735.jpg"
+                                class="d-block w-100 carousel-image" alt="..." />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 d-flex justify-content-center">
+                <div class="card" style="width: 18rem">
+                    <img src="https://png.pngtree.com/background/20230622/original/pngtree-landing-page-template-for-web-showcasing-3d-computer-design-with-open-picture-image_3950513.jpg"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 d-flex justify-content-center">
+                <div class="card" style="width: 18rem">
+                    <img src="https://png.pngtree.com/background/20230417/original/pngtree-website-blu-ray-technology-picture-image_2447430.jpg"
+                        class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 d-flex justify-content-center">
+                <div class="card" style="width: 18rem">
+                    <img src="https://img.freepik.com/foto-gratis/fondo-tecnologia-futurista-3d-ondas-datos-que-fluyen_1048-17735.jpg"
+                        class="card-img-top img-fluid" style="height: 35%" />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 d-flex justify-content-center">
+                <div class="card" style="width: 18rem">
+                    <img src="https://img.freepik.com/foto-gratis/fondo-tecnologia-futurista-3d-ondas-datos-que-fluyen_1048-17735.jpg"
+                        class="card-img-top img-fluid" style="height: 35%" />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCG6O-gkiLgUXhMswSxFckVUgIKiOre56A",
+        authDomain: "fir-3195f.firebaseapp.com",
+        projectId: "fir-3195f",
+        storageBucket: "fir-3195f.appspot.com",
+        messagingSenderId: "92479109332",
+        appId: "1:92479109332:web:e438fa516344f526e0a341",
+        measurementId: "G-96M6GVEB9J",
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+<script>
+    function cambiarTema() {
+        const body = document.body;
+        const themeButton = document.getElementById("themeButton");
+        const isDarkTheme = body.classList.contains("bg-dark");
+
+        if (isDarkTheme) {
+            body.classList.remove("bg-dark", "text-white", "navbar-dark");
+            body.classList.add("bg-light", "text-dark", "navbar-light");
+            themeButton.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Ícono para tema claro
+            localStorage.setItem("theme", "light"); // Guardar preferencia en localStorage
+        } else {
+            body.classList.remove("bg-light", "text-dark", "navbar-light");
+            body.classList.add("bg-dark", "text-white", "navbar-dark");
+            themeButton.innerHTML = '<i class="bi bi-moon-fill"></i>'; // Ícono para tema oscuro
+            localStorage.setItem("theme", "dark"); // Guardar preferencia en localStorage
+        }
+    }
+
+    // Función para cargar el tema guardado en localStorage al cargar la página
+    function cargarTema() {
+        const body = document.body;
+        const themeButton = document.getElementById("themeButton");
+        const theme = localStorage.getItem("theme");
+
+        if (theme === "dark") {
+            body.classList.remove("bg-light", "text-dark", "navbar-light");
+            body.classList.add("bg-dark", "text-white", "navbar-dark");
+            themeButton.innerHTML = '<i class="bi bi-moon-fill"></i>'; // Ícono para tema oscuro
+        } else {
+            body.classList.remove("bg-dark", "text-white", "navbar-dark");
+            body.classList.add("bg-light", "text-dark", "navbar-light");
+            themeButton.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Ícono para tema claro
+        }
+    }
+
+    // Cargar el tema al cargar la página
+    cargarTema();
+</script>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="reglamentos.html">Reglamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="redes.html">Redes sociales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutoriales.html">Tutoriales</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="themeButton" class="btn" onclick="cambiarTema()">
+                <i class="bi bi-brightness-high-fill"></i><!-- Ícono por defecto (tema claro) -->
+            </button>
+        </div>
+    </nav>
+    <div class="alert alert-success" role="alert">
+        Redes <i class="bi bi-3-circle"></i>
+    </div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FMonsterEnergy%2Fvideos%2F3499384293714009%2F&show_text=false&width=380&t=0"
+                    width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FMonsterEnergy%2Fvideos%2F1336663297248384%2F&show_text=true&width=380&t=0"
+                    width="380" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">The time has finally come for the 2023 Monster Energy AMA Amateur National
+                        Championship. See you soon, <a
+                            href="https://twitter.com/LorettaLynnMX?ref_src=twsrc%5Etfw">@LorettaLynnMX</a> 🤠 <a
+                            href="https://t.co/VkOoAOSSli">pic.twitter.com/VkOoAOSSli</a></p>&mdash; Monster Energy
+                    (@MonsterEnergy) <a
+                        href="https://twitter.com/MonsterEnergy/status/1684232237305196548?ref_src=twsrc%5Etfw">July 26,
+                        2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">The time has finally come for the 2023 Monster Energy AMA Amateur National
+                        Championship. See you soon, <a
+                            href="https://twitter.com/LorettaLynnMX?ref_src=twsrc%5Etfw">@LorettaLynnMX</a> 🤠 <a
+                            href="https://t.co/VkOoAOSSli">pic.twitter.com/VkOoAOSSli</a></p>&mdash; Monster Energy
+                    (@MonsterEnergy) <a
+                        href="https://twitter.com/MonsterEnergy/status/1684232237305196548?ref_src=twsrc%5Etfw">July 26,
+                        2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCG6O-gkiLgUXhMswSxFckVUgIKiOre56A",
+        authDomain: "fir-3195f.firebaseapp.com",
+        projectId: "fir-3195f",
+        storageBucket: "fir-3195f.appspot.com",
+        messagingSenderId: "92479109332",
+        appId: "1:92479109332:web:e438fa516344f526e0a341",
+        measurementId: "G-96M6GVEB9J",
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+<script>
+    function cambiarTema() {
+        const body = document.body;
+        const themeButton = document.getElementById("themeButton");
+        const isDarkTheme = body.classList.contains("bg-dark");
+
+        if (isDarkTheme) {
+            body.classList.remove("bg-dark", "text-white", "navbar-dark");
+            body.classList.add("bg-light", "text-dark", "navbar-light");
+            themeButton.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Ícono para tema claro
+            localStorage.setItem("theme", "light"); // Guardar preferencia en localStorage
+        } else {
+            body.classList.remove("bg-light", "text-dark", "navbar-light");
+            body.classList.add("bg-dark", "text-white", "navbar-dark");
+            themeButton.innerHTML = '<i class="bi bi-moon-fill"></i>'; // Ícono para tema oscuro
+            localStorage.setItem("theme", "dark"); // Guardar preferencia en localStorage
+        }
+    }
+
+    // Función para cargar el tema guardado en localStorage al cargar la página
+    function cargarTema() {
+        const body = document.body;
+        const themeButton = document.getElementById("themeButton");
+        const theme = localStorage.getItem("theme");
+
+        if (theme === "dark") {
+            body.classList.remove("bg-light", "text-dark", "navbar-light");
+            body.classList.add("bg-dark", "text-white", "navbar-dark");
+            themeButton.innerHTML = '<i class="bi bi-moon-fill"></i>'; // Ícono para tema oscuro
+        } else {
+            body.classList.remove("bg-dark", "text-white", "navbar-dark");
+            body.classList.add("bg-light", "text-dark", "navbar-light");
+            themeButton.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Ícono para tema claro
+        }
+    }
+
+    // Cargar el tema al cargar la página
+    cargarTema();
+</script>
+
+</html>
